@@ -26,7 +26,7 @@
 В формуле (\ref{eq:D_second}) наблюдаемыми являются параметры $B$ (стереобаза), $\varphi_0$ (угол обзора фотокамеры) и отношение $\frac{x_0}{|x_1-x_2|}$ - оно равно отношению $\frac{\xi_0}{|\xi_1 - \xi_2|}$ размера кадра $\xi_0$ к модулю разности координат изображений
 выбранной точки облака на первом и втором кадре $|\xi_1 - \xi_2|$. Итак, формула для вычисления высоты облака есть
 \begin{equation}\label{eq:D_final}
-D = \frac{B\xi_0}{2tg\frac{\varphi_0}{2}|\xi_1 - \xi_2|}
+  D = \frac{B\xi_0}{2tg\frac{\varphi_0}{2}|\xi_1 - \xi_2|}
 \end{equation}
 
 %
@@ -63,11 +63,19 @@ D = \frac{B\xi_0}{2tg\frac{\varphi_0}{2}|\xi_1 - \xi_2|}
 Рассмотрим два снимка облака сделанные одной и той же камерой с разницей во
 времени $\Delta t$. Пусть перемещение фрагмента облака в плоскости соответствует
 сдвигам $\Delta x, \Delta y$ (в метрах) и пиксельным сдвигам
-$\Delta \xi, \Delta \eta$ изображений. Введем обозначения:
+$\Delta \xi, \Delta \eta$ изображений. Введем обозначения (см. \ref{img:cloud_velocity_scheme}):
 \begin{align*}
   R &= \sqrt{\Delta x^2 + \Delta y^2}\\
   r &= \sqrt{\Delta \xi^2 + \Delta \eta^2}
 \end{align*}
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.4\textheight]{images/mag_diss/cloud_velocity_scheme.png}
+\caption{Схема геометричекой модели измерения скорости движения объекта}
+\label{img:cloud_velocity_scheme}
+\end{figure}
+
 Считаем, что высота облака $D$ за время $\Delta t$ изменилась не существенно.
 Тогда, из планиметрических соображений можно записать отношение:
 \begin{equation}
